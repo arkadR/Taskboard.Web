@@ -1,0 +1,20 @@
+﻿@using Taskboard.Web.Models.Taskboard
+@model Taskboard.Web.Models.Taskboard.UserStory
+
+<div class=@("grid-item user_story_{Model.Id}")>@await Html.PartialAsync("UserStoryCard", Model)</div>
+<div class=@($"grid-item user_story_{Model.Id}") user_story_id=@($"{Model.Id}") id=@($"grid_item_{Model.Id}_0")>
+  @{foreach (var task in Model.Tasks.Where(task => task.State == TaskState.ToDo))
+    { @await Html.PartialAsync("TaskCard", task) }
+  }
+</div>
+<div class=@($"grid-item user_story_{Model.Id}") user_story_id=@($"{Model.Id}") id=@($"grid_item_{Model.Id}_1")>
+  @{foreach (var task in Model.Tasks.Where(task => task.State == TaskState.InProgress))
+    { @await Html.PartialAsync("TaskCard", task) }
+  }
+</div>
+<div class=@($"grid-item user_story_{Model.Id}") user_story_id=@($"{Model.Id}") id=@($"grid_item_{Model.Id}_2")>
+  @{foreach (var task in Model.Tasks.Where(task => task.State == TaskState.Done))
+    { @await Html.PartialAsync("TaskCard", task) }
+  }
+</div>
+

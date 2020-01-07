@@ -1,0 +1,10 @@
+﻿@model Taskboard.Web.Models.Taskboard.Task
+
+<div id=@($"task_{Model.Id}") user_story_id=@($"us_{Model.ParentId}") task_id=@($"{Model.Id}") class="task" 
+     style="border-color: rgb(62, 23, 217);"
+     draggable="true" ondragstart="onDragStart(event)">
+  <textarea class="task-title">@Model.Title</textarea>
+  <input type="text" class="task-assignee" placeholder="Unassigned">
+  <div class="close" onClick="deleteTask(@Model.Id)">×</div>
+</div>
+

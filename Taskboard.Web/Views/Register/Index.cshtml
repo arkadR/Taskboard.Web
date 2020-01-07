@@ -1,0 +1,32 @@
+﻿@model Taskboard.Web.Models.Register.RegisterFormData
+
+@{
+  ViewData["Title"] = "Register";
+}
+
+  <div style="padding: 20px">
+    <h2>Register</h2>
+    @using (Html.BeginForm("Index", "Register", FormMethod.Post))
+    {
+      <p>@Html.LabelFor(m => m.Email)</p>
+      <p>@Html.TextBoxFor(m => m.Email)
+      @Html.ValidationMessageFor(m => m.Email)</p>
+
+      <p>@Html.LabelFor(m => m.Username)</p>
+      <p>@Html.TextBoxFor(m => m.Username)
+      @Html.ValidationMessageFor(m => m.Username)</p>
+
+      <p>@Html.LabelFor(m => m.Password)</p>
+      <p>@Html.PasswordFor(m => m.Password)
+      @Html.ValidationMessageFor(m => m.Password)</p>
+
+      <p>@Html.LabelFor(m => m.PasswordReenter)</p>
+      <p>@Html.PasswordFor(m => m.PasswordReenter)
+      @Html.ValidationMessageFor(m => m.PasswordReenter)</p>
+
+      <p>
+        <input type="submit" value="Submit" />
+        <input type="reset" value="Reset" />
+      </p>
+    }
+  </div>

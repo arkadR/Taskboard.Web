@@ -1,0 +1,24 @@
+﻿@model Taskboard.Web.Models.Register.LoginFormData
+
+@{
+  ViewData["Title"] = "Login";
+}
+
+<div style="padding: 20px">
+  <h2>Login</h2>
+  @using (Html.BeginForm("Index", "Login", FormMethod.Post))
+  {
+    <p>@Html.LabelFor(m => m.Username)</p>
+    <p>@Html.TextBoxFor(m => m.Username)
+    @Html.ValidationMessageFor(m => m.Username)</p>
+
+    <p>@Html.LabelFor(m => m.Password)</p>
+    <p>@Html.TextBoxFor(m => m.Password)
+    @Html.ValidationMessageFor(m => m.Password)</p>
+
+    <p>
+      <input type="submit" value="Submit" />
+      <input type="reset" value="Reset" />
+    </p>
+  }
+</div>

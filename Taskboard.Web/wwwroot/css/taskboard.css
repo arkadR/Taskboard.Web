@@ -1,0 +1,176 @@
+
+.projectselector {
+  position: relative;
+}
+
+  .projectselector select {
+    /* display: none; */
+  }
+
+.select-selected {
+  background-color: blue;
+}
+
+  .select-selected:after {
+    position: absolute;
+    content: "";
+    top: 14px;
+    right: 10px;
+    width: 0;
+    height: 0;
+    border: 6px solid transparent;
+    border-color: #fff transparent transparent transparent;
+  }
+
+  .select-selected.select-arrow-active:after {
+    border-color: transparent transparent #fff transparent;
+    top: 7px;
+  }
+
+/* style the items (options), including the selected item: */
+.select-items div, .select-selected {
+  color: #ffffff;
+  padding: 8px 16px;
+  border: 1px solid transparent;
+  border-color: transparent transparent rgba(0, 0, 0, 0.1) transparent;
+  cursor: pointer;
+}
+
+/* Style items (options): */
+.select-items {
+  position: absolute;
+  background-color: DodgerBlue;
+  top: 100%;
+  left: 0;
+  right: 0;
+  z-index: 99;
+}
+
+/* Hide the items when the select box is closed: */
+.select-hide {
+  display: none;
+}
+
+.select-items div:hover, .same-as-selected {
+  background-color: rgba(0, 0, 0, 0.1);
+}
+
+.userstory {
+  border: 3px solid black;
+  border-radius: 5px;
+  width: 15rem;
+  height: 15rem;
+  padding: 1rem;
+  position: relative;
+}
+
+  .userstory > input.us-name {
+    font-size: 2rem;
+    width: 100%;
+    border: 0px;
+  }
+
+    .userstory > input.us-name:hover {
+      background-color: aqua;
+    }
+
+  .userstory > input.us-assignee {
+    width: 100%;
+    position: absolute;
+    right: 0px;
+    bottom: 0px;
+  }
+
+  .userstory > input.us-deadline {
+    width: 100%;
+  }
+
+.task {
+  border: 3px solid black;
+  border-radius: 5px;
+  width: 9rem;
+  height: 9rem;
+  margin: 5px;
+  padding: 15px;
+  position: relative;
+}
+
+  .task > .close {
+    color: #aaa;
+    font-size: 28px;
+    font-weight: bold;
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    width: 25px;
+    height: 25px;
+  }
+
+    .task > .close:hover,
+    .task > .close:focus {
+      color: black;
+      text-decoration: none;
+      cursor: pointer;
+    }
+
+  .task > .task-title {
+    width: 100%;
+    height: 80%;
+    resize: none;
+    border: none;
+    border-color: transparent;
+    box-shadow: none;
+    outline: none;
+  }
+
+  .task > .task-assignee {
+    width: 100%;
+    height: 20px;
+    border: none;
+    outline: none;
+    font-style: italic;
+  }
+
+  .task > .task-title:active {
+    border: none;
+  }
+
+.task-new {
+  border: 3px solid lightblue;
+  color: lightblue;
+  border-radius: 5px;
+  width: 9rem;
+  height: 9rem;
+  margin: 5px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+  .task-new:hover {
+    cursor: pointer;
+    border: 3px solid black;
+    color: black;
+  }
+
+
+.grid-container {
+  display: grid;
+  justify-content: stretch;
+  align-content: start;
+  grid-auto-flow: row;
+  grid-template-columns: 17rem calc(100%/3 - 17rem/3) calc(100%/3 - 17rem/3) calc(100%/3 - 17rem/3);
+  border-top: 1px solid black;
+  border-left: 1px solid black;
+}
+
+.grid-item {
+  padding: 0.5rem;
+  border-bottom: 1px solid black;
+  border-right: 1px solid black;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  align-items: flex-start;
+}

@@ -1,0 +1,46 @@
+﻿@{
+  ViewData["Title"] = "Taskboard";
+}
+
+<div id="new-us-modal" class="modal">
+  <div class="modal-content">
+    <span class="close">&times;</span>
+    <h2>Create new User Story</h2>
+    @* <form id="user-story-form" method='POST' action='php/create_userstory.php'> *@
+    @*   <label for='new-us-name'>Title:</label> *@
+    @*   <input name='new-us-name' id='new-us-name' type="text" placeholder="User story name" required="required"><br> *@
+    @*   <label for='new-us-id'>User story Id:</label> *@
+    @*   <input name='new-us-id' id="new-us-id" type="number" required="required"><br> *@
+    @*   <label for='new-us-deadline'>Deadline:</label> *@
+    @*   <input name='new-us-deadline' id='new-us-deadline' type="date"><br> *@
+    @*   <label for='new-us-description'>Description:</label> *@
+    @*   <textarea name='new-us-description' id='new-us-description' name="userstory_description"></textarea><br> *@
+    @*   <input type="submit" value="Submit"> *@
+    @*   <input type='reset' value="Reset"> *@
+    @* </form> *@
+  </div>
+</div>
+<div class="maincontent">
+  <div id="sidebar">
+    <nav>
+    <div class="projectselector">
+      <select>
+        @* <?php include 'php/sidebar_projects.php';?> *@
+      </select>
+    </div>
+    @* <?php include 'php/sidebar.php';?> *@
+    </nav>
+  </div>
+  <div id="maincontent">
+    <div class="grid-container">
+      <div class="grid-item">User Story</div>
+      <div class="grid-item">To do</div>
+      <div class="grid-item">In Progress</div>
+      <div class="grid-item">Completed</div>
+      @* <?php include 'php/load_userstories.php';?> *@
+      <div class="grid-item">
+        <button id="new-us-button">&plus;</button>
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,164 @@
+header{
+	font-size: 1em;
+	font-variant: small-caps;
+	font-family: 'Quicksand', sans-serif;
+}
+body{
+	background-image: url('../resource/texture_background.jpg');
+	background-repeat: repeat;
+	margin: 10px;
+	padding: 10px;
+	font-family: 'Quicksand', sans-serif;
+}
+footer{
+	left: 20px;
+	position: absolute;
+	font-size: 80%;
+	font-style: italic;
+}
+.title
+{
+	margin-left: auto;
+	margin-right: auto;
+    text-align: center;
+	font-family: 'Quicksand', sans-serif;
+}
+.welcome{
+	text-align: center;
+    margin-top: 50px;
+	margin-bottom: 50px;
+    margin-left: 300px;
+    margin-right: 300px;
+	border: 2px solid green;
+	border-radius: 15px;
+	padding: 20px;
+	font-size: 140%;
+	background-color: white;
+}
+.button{
+	background-color: green;
+	color:white;
+	font-family: 'Quicksand', sans-serif;
+	border: none;
+	padding: 16px 32px;
+	border-radius: 25px;
+	font-size: 2em;
+	cursor:pointer;
+}
+.button:hover{
+	background-color: white;
+	color:green;
+	border: 4px solid green;
+	padding: 12px 28px;
+}
+.welcome > p:nth-child(2) {
+  font-weight: bold;
+}
+.notification{
+	background-color:blue;
+	color:white;
+	position: fixed;
+	right: 0;
+	top: 200px;
+	padding: 10px;
+	border-top-left-radius: 25px;
+	border-bottom-left-radius: 25px;
+}
+#register_container{
+	padding: 10px;
+}
+#body_kanban{
+	font-weight: bold;
+	line-height: 170%;
+}
+#table1{
+	text-align: center;
+	border: 2px solid black;
+}
+.container{
+	font-weight: bold;
+}
+#content{
+	font-style: italic;
+}
+thead{
+	background-color: #4CAF50;
+	color: white;
+}
+th, td{
+	border-bottom: 1px solid #4CAF50;
+}
+@media only screen and (max-height: 300px) {
+	footer{
+		color: red;
+	}
+}
+a:link {
+  color: green;
+}
+
+a:visited {
+  color: green;
+}
+a:hover {
+  color: lightgreen;
+}
+a:active {
+  color: yellow;
+} 
+input:checked {
+	height: 20px;
+	width: 20px;
+}
+.overview{
+	text-align: center;
+	padding: 30px;
+}
+.overview_element{
+	height: 400px;
+	width: 50%;
+	margin: 0 auto;
+	background-color: white;
+	border: 5px solid green;
+	border-radius: 20px;
+	margin-bottom: 30px;
+	padding-right: 30px;
+	padding-left: 30px;
+}
+.overview_element:nth-child(even){
+	background-color: green;
+	border: 5px solid white;
+}
+.overview_img{
+	height: 230px;
+	border: 3px solid black;
+	border-radius: 20px;
+}
+#grandpa{
+	margin-right: 30px;
+	float:left;
+}
+#ocena{
+	text-align: center;
+}
+#dictionary_number{
+	margin: 10px;
+	border-radius: 15px;
+	padding: 8px 16px;
+	width: 10px;
+}
+
+#dictionary_button{
+	background-color: green;
+	color:white;
+	font-family: 'Quicksand', sans-serif;
+	border: none;
+	padding: 8px 16px;
+	border-radius: 15px;
+	font-size: 1em;
+	cursor:pointer;
+}
+#helpText{
+	color: green;
+	font-weight: bold;
+}

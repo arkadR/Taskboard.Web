@@ -1,0 +1,54 @@
+﻿@model Taskboard.Web.Models.Taskboard.TaskboardViewModel
+
+@{
+  ViewData["Title"] = "Taskboard";
+}
+
+<div id="new-us-modal" class="modal">
+  <div class="modal-content">
+    <span class="close">&times;</span>
+    <h2>Create new User Story</h2>
+    @* <form id="user-story-form" method='POST' action='php/create_userstory.php'> *@
+    @*   <label for='new-us-name'>Title:</label> *@
+    @*   <input name='new-us-name' id='new-us-name' type="text" placeholder="User story name" required="required"><br> *@
+    @*   <label for='new-us-id'>User story Id:</label> *@
+    @*   <input name='new-us-id' id="new-us-id" type="number" required="required"><br> *@
+    @*   <label for='new-us-deadline'>Deadline:</label> *@
+    @*   <input name='new-us-deadline' id='new-us-deadline' type="date"><br> *@
+    @*   <label for='new-us-description'>Description:</label> *@
+    @*   <textarea name='new-us-description' id='new-us-description' name="userstory_description"></textarea><br> *@
+    @*   <input type="submit" value="Submit"> *@
+    @*   <input type='reset' value="Reset"> *@
+    @* </form> *@
+  </div>
+</div>
+<div class="content">
+  <div id="sidebar">
+    <nav>
+      <div class="projectselector">
+        @Html.DropDownListFor(vm => vm.Projects, new SelectList(Model.Projects, "Id", "Name"), " ")
+      </div>
+      <div class="sidebaroption"><a asp-area="" asp-controller="Taskboard" asp-action="Index">Tasks</a></div>
+      <div class="sidebaroption"><a asp-area="" asp-controller="Taskboard" asp-action="Notes">Notes</a></div>
+      <div class="sidebaroption"><a asp-area="" asp-controller="Taskboard" asp-action="Messages">Messages</a></div>
+      <div class="sidebaroption"><a asp-area="" asp-controller="Taskboard" asp-action="GitHistory">Git History</a></div>
+    </nav>
+  </div>
+  <div id="maincontent">
+    <div class="grid-container">
+      <div class="grid-item">User Story</div>
+      <div class="grid-item">To do</div>
+      <div class="grid-item">In Progress</div>
+      <div class="grid-item">Completed</div>
+      @foreach(var userStory in Model.UserStories)
+      {
+        @await Html.PartialAsync("UserStoryRow", userStory)
+      }
+      <div class="grid-item">
+        <button id="new-us-button">&plus;</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script src="js/taskboard.js"></script>
